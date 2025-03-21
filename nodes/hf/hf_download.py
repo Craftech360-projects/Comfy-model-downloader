@@ -56,7 +56,7 @@ class HFAuthDownloader(HFDownloader):  # Inherit from HFDownloader to share meth
                 "repo_id": ("STRING", {"default": "runwayml/stable-diffusion-v1-5"}),
                 "filename": ("STRING", {"default": "v1-5-pruned.ckpt"}),
                 "local_path": ("STRING", {"default": "checkpoints"}),
-                "hf_token": ("STRING", {
+                "hf_token": ("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", {
                     "default": "", 
                     "multiline": False, 
                     "password": True
@@ -66,7 +66,7 @@ class HFAuthDownloader(HFDownloader):  # Inherit from HFDownloader to share meth
         }
 
     def download_model(self, repo_id, filename, local_path, hf_token, overwrite):
-        print(f'downloading model {repo_id} {filename} {local_path} {hf_token} {overwrite}')
+        print(f'downloading.. model {repo_id} {filename} {local_path} {hf_token} {overwrite}')
         try:
             # Always use token for auth version
             import huggingface_hub
